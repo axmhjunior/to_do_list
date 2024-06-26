@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Form from './components/form/Form'
-import Menu from './components/menu/Menu'
+import Filter from './components/filter/Filter'
 import TasksList from './components/tasksList/TasksList'
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   return (
     <div className='border rounded p-4 items-center flex flex-col justify-center'>
       <Form/>
-      <Menu/>
+      <Filter/>
       <TasksList/>
     </div>
   )

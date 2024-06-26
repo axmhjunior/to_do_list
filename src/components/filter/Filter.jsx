@@ -1,4 +1,4 @@
-function Menu() {
+function Filter() {
     return ( 
         <nav className="space-x-2 flex flex-wrap justify-center mt-2">
             <button id="menu-cmd">Complete</button>
@@ -9,4 +9,4 @@ function Menu() {
      );
 }
 
-export default Menu;
+export default Filter;
