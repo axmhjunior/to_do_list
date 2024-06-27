@@ -1,17 +1,17 @@
-import { useState } from 'react'
-import Form from './components/form/Form'
-import Filter from './components/filter/Filter'
-import TasksList from './components/tasksList/TasksList'
+import Home from './pages/home/Home'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import Login from './pages/login/Login'
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
-    <div className='border rounded p-4 items-center flex flex-col justify-center'>
-      <Form/>
-      <Filter/>
-      <TasksList/>
-    </div>
+   <BrowserRouter>
+      <Routes>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/' element={<Home/>}/>
+      </Routes>
+   </BrowserRouter>
   )
 }
 
