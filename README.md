@@ -1,8 +1,68 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# To-Do List App
 
-Currently, two official plugins are available:
+This is a To-Do List application developed using React JS. The application uses JSON Server as a database to store tasks and Tailwind CSS for styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Add Task**: Add new tasks to your list.
+- **Check Task**: Mark tasks as completed.
+- **Delete Task**: Remove tasks from the list.
+- **View Completed Tasks**: Filter and view only the tasks that have been completed.
+- **View Incomplete Tasks**: Filter and view only the tasks that are not yet completed.
+
+## Technologies Used
+
+- **React JS**: JavaScript library for building user interfaces.
+- **JSON Server**: Simulates a REST API for storing and retrieving tasks.
+- **Tailwind CSS**: CSS framework for styling the application.
+
+## How to Run the Project
+
+### Prerequisites
+
+- Node.js
+- npm or yarn
+
+### Steps
+## Navigate to the project directory:
+- cd your-repository
+
+
+## Install project dependencies:
+- npm install
+
+## Start JSON Server:
+- npx json-server --watch db.json --port 5000
+
+## In another terminal, start the React application:
+- npm start
+-http://localhost:3000
+
+### Project Structure
+## src/: Contains the source code of the project.
+
+- components/: React components used in the application.
+  
+- pages/: Application pages.
+  
+- services/: Services for communication with JSON Server.
+  
+- App.js: Main application component.
+
+- index.js: Entry point of the React application
+
+
+### Contribution
+Feel free to contribute to this project. To do so, follow the steps below:
+
+Fork this repository.
+Create a branch for your feature or bug fix:
+- git checkout -b my-feature
+
+Commit your changes:
+- git commit -m 'My new feature'
+
+### License
+This project is licensed under the MIT License. 
