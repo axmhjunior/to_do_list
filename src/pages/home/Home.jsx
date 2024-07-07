@@ -1,14 +1,25 @@
+import { useContext, useEffect } from "react";
 import Filter from "../../components/filter/Filter";
 import Form from "../../components/form/Form";
 import TasksList from "../../components/tasksList/TasksList";
+import { AppContext } from "../../context/AppContext";
+import { api } from "../../apiConfig/ApiConfig";
 
 function Home() {
+
+    const {taskList, setTaskList} = useContext(AppContext)
+
+    useEffect(()=>{
+        const getTasks = async () =>{
+            const response = await api.get('tasks');
+            setTaskList(response.data)     
+        }
+        getTasks()
+    }, [taskList])
+
+    
     return ( 
-        <div className='border rounded p-4 items-center flex flex-col justify-center'>
-        <Form/>
-        <Filter/>
-        <TasksList/>
-      </div>
+        <TasksList taskList={taskList}/>
      );
 }
 
