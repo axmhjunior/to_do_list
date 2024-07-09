@@ -27,18 +27,19 @@ This is a To-Do List application developed using React JS. The application uses 
 
 ### Steps
 ## Navigate to the project directory:
-- cd your-repository
+- cd to_do_list
 
 
 ## Install project dependencies:
 - npm install
+- npm install react-router-dom
+- npm install react-icons
 
 ## Start JSON Server:
 - npx json-server --watch db.json --port 5000
 
 ## In another terminal, start the React application:
 - npm start
--http://localhost:3000
 
 ### Project Structure
 ## src/: Contains the source code of the project.
