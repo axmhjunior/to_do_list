@@ -1,19 +1,3 @@
 {
-  "tasks": [
-    {
-      "id": "50e6",
-      "task_content": "fggfg",
-      "isChecked": false
-    },
-    {
-      "id": "b2b6",
-      "task_content": "nghj",
-      "isChecked": false
-    },
-    {
-      "id": "a209",
-      "task_content": "gugu",
-      "isChecked": false
-    }
-  ]
+  "tasks": []
 }
