@@ -6,6 +6,15 @@ import { useState } from "react";
 
 function TasksList({taskList}) {
 
+    const [showAllTask, setShowAllTask] = useState(false)
+
+    const truncateText = (text) => {
+        return (text.length  > 35 && !showAllTask) ? text.substring(0, 20) + "..." : text;
+        }
+
+    const showTask = ()=>{
+        setShowAllTask(!showAllTask)
+        }
 
     const handleDeleteTask = async (id) =>{
         try{
@@ -41,12 +50,13 @@ function TasksList({taskList}) {
                                 "" : 
                                 "bg-none border-4 rounded-full w-5 h-5"}
                                 onClick={()=> handleCheckButton(e.id)}>{e.isChecked ? <FaCheck className="mx-auto"/> : ""}</button>
+
                                 <p 
-                                    onClick={()=>toggleTruncate(id)}
-                                    className={e.isChecked ? "line-through italic" : ""}>
-                                    
-                                    {e.task_content.length > 20  ? e.task_content.substring(0,20)+'...' : e.task_content}
-                                    </p>
+                                    className={e.isChecked ? "line-through italic break-words max-w-64" : "break-words max-w-64"}
+                                    onClick={showTask}>
+                                    {truncateText(e.task_content)}
+                                </p>
+                             
                             <button onClick={()=>handleDeleteTask(e.id)} className="bg-red-800 rounded-full w-5 h-5 text-white"><BsTrash className="mx-auto" /></button>
                             </li>) }
 
